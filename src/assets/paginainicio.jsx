@@ -8,9 +8,9 @@ const PaginaInicial = () => {
       
       <header className="hero-header">
         <div className="logo-container">
-          <div className="logo logo--instituto">Logo Inst.</div>
+          <div className="logo logo--instituto">Logo frei</div>
           <h1 className="hero-title">5ª Edição Feira de Profissões Instituto Nossa Senhora de Fátima</h1>
-          <div className="logo logo--feira">Logo Feira</div>
+          <div className="logo logo--feira">Logo feira</div>
         </div>
       </header>
 

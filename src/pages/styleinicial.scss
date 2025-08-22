@@ -141,3 +141,38 @@ $button-end: #f4b434;
     margin: 0;
   }
 }
+
+.mapandares{
+
+  height: 400px;
+}
+
+.info-cardf {
+  background: linear-gradient(180deg, #d3e5f2 0%, #a2c6eb 100%);
+  color: $text-dark;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px $shadow-color;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.texto-rasgado {
+  background: #fdfdfd;
+  padding: 10px 20px;
+  font-family: "Times New Roman", serif;
+  font-size: 20px;
+  text-align: center;
+
+  
+  clip-path: polygon(
+    0% 10%, 10% 15%, 20% 5%, 30% 12%, 
+    40% 8%, 50% 15%, 60% 5%, 70% 12%, 
+    80% 8%, 90% 15%, 100% 10%, 
+    100% 90%, 90% 85%, 80% 95%, 70% 88%, 
+    60% 92%, 50% 85%, 40% 95%, 30% 88%, 
+    20% 92%, 10% 85%, 0% 90%
+  );
+}
+

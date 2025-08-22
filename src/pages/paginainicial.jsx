@@ -14,6 +14,7 @@ import Facebook from '../assets/facebookLogo.png';
 import Instagram from '../assets/InstagramLogo.png';
 import Chrome from '../assets/ChromeLogo.png';
 import LinkedIn from '../assets/LinkedInLogo.png';
+import mapandares from '../assets/mapandares.png'
 
 function Paginainicial() {
   return (
@@ -45,11 +46,13 @@ function Paginainicial() {
 
                 <div className='main-part1'>
                     <div className='main-frei-image'>
+                        <div className='info-cardf'>
                         <img className='frei-image'
                             src={frei}
                         />
+                        </div>
                     </div>
-
+                  
                     <div className='info-card'>
                         <h3>5° Edição da feira de Profissões</h3>
 
@@ -74,9 +77,10 @@ function Paginainicial() {
                 </div>
 
                     <footer className='hero-footer'>
+                        <div className='texto-rasgado'>
                         <p className='bottom-quote'>
                             ESFORÇO QUE TRANSFORMA, E O ORGULHO PERMANECE!
-                        </p>
+                        </p></div>
                     </footer>
 
                 <div className='video'>
@@ -92,8 +96,8 @@ function Paginainicial() {
 
                 <h2>Mapa de Localização</h2>
 
-                <img className='map-frei'
-                    src=""
+                <img className='mapandares'
+                    src={mapandares}
                 />
 
                 <div className='carrossel-feira'>

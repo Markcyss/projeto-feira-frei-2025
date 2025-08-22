@@ -6,6 +6,7 @@ import Facebook from '../assets/facebookLogo.png';
 import Instagram from '../assets/InstagramLogo.png';
 import Chrome from '../assets/ChromeLogo.png';
 import LinkedIn from '../assets/LinkedInLogo.png';
+import AlunoPCInfo from '../assets/AlunoPCInfo.png';
 
 function Registro() {
   return (
@@ -32,6 +33,41 @@ function Registro() {
 
             <main className='main'>
                 
+                <div className='main-title'>
+                    <h1 className='main-title-text'>Cadastro do Visitante</h1>
+                </div>
+                <div className='main-registry-list'>
+                    <input className='list-input1' value={'Nome'} />
+                    <input className='list-input1' value={'Idade'} />
+                    <br />
+                    <input className='list-input1' value={'CPF'} />
+                    <input className='list-input1' value={'Telefone'} />
+                    <br />
+                    <input className='list-input2' value={'Email'} />
+                    <br />
+                    <input className='list-input2' value={'Escolaridade'} />
+                    <br />
+                    <input className='list-input2' value={'Curso de Interesse'} />
+                    <br />
+                    <input className='list-input2' value={'Como ficou sabendo da Feira'} />
+                    <br />
+                    <input className='list-input2' value={'Previsão de Chegada'} />
+                    <br />
+
+                    <div className='main-registry-button'>
+                        <div className='main-question'>
+                            <p>Já foi aluno do Frei?</p>
+                        </div>
+                            <button className='button-confirm-yes'>Sim</button>
+                            <button className='button-confirm-no'>Não</button>
+                        <br />
+                    </div>
+                        <button className='button-registry'>Cadastrar</button>
+                </div>
+                
+                <img className='main-background-registry'
+                    src={ AlunoPCInfo }
+                />
 
             </main>
 

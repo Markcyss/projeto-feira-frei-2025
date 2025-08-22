@@ -44,3 +44,61 @@ $button-end: #f4b434;
   margin: 0 20px;
   text-align: center;
 }
+.main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .main-registry-list {
+    width: 100%;
+    background-color: blue;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+
+    .list-input1 {
+      width: 40%;
+      border-radius: 20px;
+      border-color: white;
+    }
+    .list-input2 {
+      width: 85%;
+      border-radius: 20px;
+      border-color: white;
+    }
+
+    
+  }
+  
+  .main-registry-button {
+    background-color: red;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+    
+    .main-question {
+      border: black;
+      background-color: yellow;
+    }
+    .button-confirm-yes {
+      border-radius: 20px;
+      background-color: #163159;
+    }
+    .button-confirm-no {
+      border-radius: 20px;
+      background-color: #AC431D;
+    }
+   
+    .button-registry {
+      border-radius: 20%;
+    }
+  }
+}

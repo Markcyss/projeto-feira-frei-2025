@@ -31,7 +31,7 @@ function Registro() {
                 </div>
             </header>
 
-            <main className='main'>
+            <main className='main-registro'>
                 
                 <div className='main-title'>
                     <h1 className='main-title-text'>Cadastro do Visitante</h1>

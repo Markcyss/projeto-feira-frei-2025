@@ -52,53 +52,89 @@ $button-end: #f4b434;
   justify-content: space-between;
   align-items: center;
 
+  .main-title {
+    font-size: 18px;
+    font-style: italic;
+    color: #5B6FD0;
+  }
+
   .main-registry-list {
+    //background-color: blue;
     width: 100%;
-    background-color: blue;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5%;
+    font-weight: bold;
 
-    .list-input1 {
-      width: 40%;
-      border-radius: 20px;
-      border-color: white;
+    .main-list-input1 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 5%;
+      .list-input1 {
+        width: 45%;
+        height: 40px;
+        background-color: #D9D9D9;
+        border: 2px solid rgb(180, 180, 180);
+        border-radius: 15px;
+        font-weight: bold;
+      }
     }
     .list-input2 {
-      width: 85%;
-      border-radius: 20px;
-      border-color: white;
+      width: 95%;
+      height: 40px;
+      background-color: #D9D9D9;
+      border: 2px solid rgb(180, 180, 180);
+      border-radius: 15px;
+      font-weight: bold;
     }
-
-    
   }
   
   .main-registry-button {
-    background-color: red;
-    width: 100%;
+    //background-color: red;
+    width: 95%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10%;
+    flex-wrap: wrap;
+    gap: 5%;
     
     .main-question {
-      border: black;
-      background-color: yellow;
+      display: flex;
+      width: 50%;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid rgb(180, 180, 180);
+      border-radius: 15px;
+      background-color: #D9D9D9;
+      font-size: 14px;
     }
-    .button-confirm-yes {
-      border-radius: 20px;
-      background-color: #163159;
-    }
-    .button-confirm-no {
-      border-radius: 20px;
-      background-color: #AC431D;
+    .main-buttons {
+      //background-color: green;
+      display: flex;
+      justify-content: space-between;
+      width: 45%;
+      height: 40px;
+      .main-button-confirm {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        border: 2px solid rgb(180, 180, 180);
+        border-radius: 15px;
+        background-color: #D9D9D9;
+        font-size: 14px;
+      }
     }
    
-    .button-registry {
-      border-radius: 20%;
-    }
+  }
+  .button-registry {
+    width: 25%;
+    height: 40px;
+    margin-top: 2%;
+    border-radius: 15px;
+    background-color: #597aac;
+    font-weight: bold;
   }
 }

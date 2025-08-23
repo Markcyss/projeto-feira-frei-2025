@@ -37,11 +37,15 @@ function Registro() {
                     <h1 className='main-title-text'>Cadastro do Visitante</h1>
                 </div>
                 <div className='main-registry-list'>
-                    <input className='list-input1' value={'Nome'} />
-                    <input className='list-input1' value={'Idade'} />
+                    <div className='main-list-input1'>
+                        <input className='list-input1' value={'Nome'} />
+                        <input className='list-input1' value={'Idade'} />
+                    </div>
                     <br />
-                    <input className='list-input1' value={'CPF'} />
-                    <input className='list-input1' value={'Telefone'} />
+                    <div className='main-list-input1'>
+                        <input className='list-input1' value={'CPF'} />
+                        <input className='list-input1' value={'Telefone'} />
+                    </div>
                     <br />
                     <input className='list-input2' value={'Email'} />
                     <br />
@@ -58,9 +62,16 @@ function Registro() {
                         <div className='main-question'>
                             <p>Já foi aluno do Frei?</p>
                         </div>
-                            <button className='button-confirm-yes'>Sim</button>
-                            <button className='button-confirm-no'>Não</button>
-                        <br />
+                        <div className='main-buttons'>
+                            <div className='main-button-confirm'>
+                                <input type="checkbox" />
+                                <p>Sim</p>
+                            </div>
+                            <div className='main-button-confirm'>
+                                <input type="checkbox" />
+                                <p>Não</p>
+                            </div>
+                        </div>
                     </div>
                         <button className='button-registry'>Cadastrar</button>
                 </div>

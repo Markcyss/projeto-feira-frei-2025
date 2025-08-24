@@ -138,3 +138,38 @@ $button-end: #f4b434;
     font-weight: bold;
   }
 }
+
+.registry-footer {
+  margin-top: 2%;
+  background-color: #C9BCBC;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .social-media-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .social-media-general {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .social-media-images {
+      //background-color: yellow;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+    .social-media-texts {
+      //background-color: green;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 13px;
+    }
+  }
+}

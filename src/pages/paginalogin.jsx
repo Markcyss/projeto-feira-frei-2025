@@ -14,26 +14,29 @@ function Login() {
 
             <header className='login-header'>
                 <div className='logo-container'>
-                    <Link to={'..'}>
-                        <img className='logo logo--instituto'
-                            src={freilogo}
+                    <div className='login-background-logo1'>
+                        <Link to={'..'}>
+                            <img className='logo logo--instituto'
+                                src={freilogo}
+                                height='50px'
+                            />
+                        </Link>
+                    </div>
+                    <div className='login-background-logo2'>
+                        <h2 className='login-title'>5° Edição Feira de Profissões Instituto Nossa Senhora de Fátima</h2>
+                                    
+                        <img className='logo logo--feira'
+                            src={feiralogo}
                             height='50px'
                         />
-                    </Link>
-            
-                    <h2 className='login-title'>5° Edição Feira de Profissões Instituto Nossa Senhora de Fátima</h2>
-                                
-                    <img className='logo logo--feira'
-                        src={feiralogo}
-                        height='50px'
-                    />
+                    </div>
                 </div>
             </header>
 
             <main className='main'>
                 <button className='main-login'>Login</button>  
-                <input value={'Email'} />
-                <input value={'Password'}/>
+                <input value={'Email:'} />
+                <input value={'Password:'}/>
                 <button className='main-enter'>Entrar</button>
 
             </main>

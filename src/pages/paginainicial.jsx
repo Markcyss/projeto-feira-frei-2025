@@ -31,7 +31,7 @@ function Paginainicial() {
                             height='50px'
                         />
                     </Link>
-
+                    
                     <h2 className='hero-title'>5° Edição Feira de Profissões Instituto Nossa Senhora de Fátima</h2>
                     
                     <img className='logo logo--feira'
@@ -53,6 +53,10 @@ function Paginainicial() {
                             src={frei}
                         />
                         </div>
+                    </div>
+
+                    <div className='separa'>
+
                     </div>
                   
                     <div className='info-card'>
@@ -188,12 +192,6 @@ function Paginainicial() {
                             />
                             </Link>
                         </div>
-                    </div>
-                    <div className='social-media-texts'>
-                        <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
-                        <p className='social-media-name'>institutonsfatima</p>
-                        <p className='social-media-name'>https://www.acaonsfatima.org.br</p>
-                        <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
                     </div>
                 </div>
             </footer>

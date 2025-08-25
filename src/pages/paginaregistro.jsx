@@ -75,10 +75,6 @@ function Registro() {
                     </div>
                         <button className='button-registry'>Cadastrar</button>
                 </div>
-                
-                <img className='main-background-registry'
-                    src={ AlunoPCInfo }
-                />
 
             </main>
 

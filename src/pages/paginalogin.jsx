@@ -31,39 +31,60 @@ function Login() {
             </header>
 
             <main className='main'>
-                
-                <button>Login</button>
-                <label>email</label>
-                <input value={'email'} />
-                <input type="text" value={''}/>
-                <button>Entrar</button>
+                <button className='main-login'>Login</button>  
+                <input value={'Email'} />
+                <input value={'Password'}/>
+                <button className='main-enter'>Entrar</button>
 
             </main>
 
-            <footer className='footer'>
-                
-                <img className='logo-rede'
-                    src={Facebook}
-                    height='50px'
-                />
-
-                <img className='logo-rede'
-                    src={Instagram}
-                    height='50px'
-                />
-
-                <img className='logo-rede'
-                    src={Chrome}
-                    height='50px'
-                />
-
-                <img className='logo-rede'
-                    src={LinkedIn}
-                    height='50px'
-                />
-
+            <footer className='inicial-footer'>
+                <div className='social-media-call'>
+                    <h2>Nos acompanhe em nossas redes sociais!</h2>
+                </div>
+                <div className='social-media-general'>
+                    <div className='social-media-images'>
+                        <div className='social-media-logo'>
+                            <Link to={'https://web.facebook.com/institutonsfatima'}>
+                                <img className='logo-rede'
+                                    src={Facebook}
+                                    height='40px'
+                                />
+                            </Link>
+                        </div>
+                        <div className='social-media-logo'>
+                            <Link to={'https://www.instagram.com/institutonsfatima'}>
+                                <img className='logo-rede'
+                                    src={Instagram}
+                                    height='40px'
+                                />
+                            </Link>
+                        </div>
+                        <div className='social-media-logo'>
+                            <Link to={'https://www.acaonsfatima.org.br'}>
+                                <img className='logo-rede'
+                                    src={Chrome}
+                                    height='40px'
+                                />
+                            </Link>
+                        </div>
+                        <div className='social-media-logo'>
+                            <Link to={'https://www.linkedin.com/company/institutonsfatima'}>
+                            <img className='logo-rede'
+                                src={LinkedIn}
+                                height='40px'
+                            />
+                            </Link>
+                        </div>
+                    </div>
+                    <div className='social-media-texts'>
+                        <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
+                        <p className='social-media-name'>institutonsfatima</p>
+                        <p className='social-media-name'>https://www.acaonsfatima.org.br</p>
+                        <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
+                    </div>
+                </div>
             </footer>
-
         </div>
     </>
   )

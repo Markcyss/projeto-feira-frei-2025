@@ -14,7 +14,9 @@ import Facebook from '../assets/facebookLogo.png';
 import Instagram from '../assets/InstagramLogo.png';
 import Chrome from '../assets/ChromeLogo.png';
 import LinkedIn from '../assets/LinkedInLogo.png';
-import mapandares from '../assets/mapandares.png'
+import mapandares from '../assets/mapandares.png';
+import { Carousel } from "../carousel1/carousel.jsx";
+import { lastfair } from "../assets/data/carousel.json";
 
 function Paginainicial() {
   return (
@@ -78,20 +80,19 @@ function Paginainicial() {
 
                     <footer className='hero-footer'>
                         <div className='texto-rasgado'>
-                        <p className='bottom-quote'>
-                            ESFORÇO QUE TRANSFORMA, E O ORGULHO PERMANECE!
-                        </p></div>
+                            <p className='bottom-quote'>
+                                ESFORÇO QUE TRANSFORMA, E O ORGULHO PERMANECE!
+                            </p>
+                        </div>
                     </footer>
-
-                <div className='video'>
-
+                    
+                <div className="main-carrossel">
+                    <Carousel data={lastfair} />
                 </div>
 
                 <div className='text-video'>
                     <p>Veja como transformar vidas no Instituto Nossa Senhora de Fátima</p>
                     <p>Descubra tudo o que o Instituto Nossa Senhora de Fátima pode oferecer para o seu futuro!</p>
-                    <p>Quer saber como é, de verdade, estudar aqui? Assista ao vídeo e mergulhe nas histórias inspiradoras de alunos que transformaram suas vidas com nossos cursos.</p>
-                    <p>Conheça os bastidores, os diferenciais da nossa formação e como a nossa escola pode ser o seu próximo passo rumo ao sucesso. Venha se encantar com experiências reais e se imaginar no nosso lugar. O futuro começa agora - e ele pode começar aqui!</p>
                 </div>
 
                 <h2>Mapa de Localização</h2>
@@ -100,103 +101,101 @@ function Paginainicial() {
                     src={mapandares}
                 />
 
-                <div className='carrossel-feira'>
-
-                    <img 
-                        src={FotoGrupo}
-                        height='100px'
-                    />
-
-                </div>
-
-                <div className='carrossel-cursos'>
-
-                    <div className='cursos-eletro'>
-
-                        <img
-                            src={AlunosEletro}
-                            height='200px'
-                        />
-
-                    </div>
-
-                </div>
-
-                <div className='carrossel-andares'>
-
-                    <div className='salas'>
-
-                        <img
-                            src={FeiraCV}
-                            height='200px'
-                        />
-
-                    </div>
-
-                </div>
 
                 <div className='mapa-google'>
-
-                    <img
-                        src={mapaGoogle}
-                        height='200px'
-                    />
-
+                    <Link to={'https://www.google.com/maps/place/Instituto+Social+Nossa+Senhora+de+Fátima/@-23.6803333,-46.7105112,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce502d2289a843:0x14406b17b30d0174!8m2!3d-23.6803333!4d-46.7079309!16s%2Fg%2F1ptxj22k2?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D'}>
+                        <img
+                            src={mapaGoogle}
+                            height='200px'
+                        />
+                    </Link>
                 </div>
 
-                <h2>Empresas Parceiras Presentes</h2>
+                <div className='main-empresas'>
+                    <h2>Empresas Parceiras Presentes</h2>
 
-                <div className='empresa'>
+                    <div className='emp-n1'>
+                        <div className='empresa'>
+                            <Link to={'https://www.casadamulherpaulistana.org.br'}>
+                                <img className='logo-empresa'
+                                    src={CasaDaMulherPaulistana}
+                                    height='200px'
+                                />
+                            </Link>
+                        </div>
+                    </div>
 
-                    <img className='logo-empresa'
-                        src={CasaDaMulherPaulistana}
-                        height='200px'
-                    />
+                    <div className='emp-n2'>
+                        <div className='empresa'>
+                            <Link to={'https://www.stb.com.br'}>
+                                <img className='logo-empresa'
+                                    src={STB}
+                                    height='200px'
+                                />
+                            </Link>
+                        </div>
+                    </div>
 
-                </div>
-
-                <div className='empresa'>
-
-                    <img className='logo-empresa'
-                        src={STB}
-                        height='200px'
-                    />
-
-                </div>
-
-                <div className='empresa'>
-
-                    <img className='logo-empresa'
-                        src={OticasCarol}
-                        height='200px'
-                    />
-
+                    <div className='emp-n3'>
+                        <div className='empresa'>
+                            <Link to={'https://www.oticascarol.com.br/brasil'}>
+                                <img className='logo-empresa'
+                                    src={OticasCarol}
+                                    height='200px'
+                                />
+                            </Link>
+                        </div>
+                    </div>
                 </div>
 
             </main>
 
-            <footer className='footer'>
-                
-                <img className='logo-rede'
-                    src={Facebook}
-                    height='50px'
-                />
-
-                <img className='logo-rede'
-                    src={Instagram}
-                    height='50px'
-                />
-
-                <img className='logo-rede'
-                    src={Chrome}
-                    height='50px'
-                />
-
-                <img className='logo-rede'
-                    src={LinkedIn}
-                    height='50px'
-                />
-
+            <footer className='inicial-footer'>
+                <div className='social-media-call'>
+                    <h2>Nos acompanhe em nossas redes sociais!</h2>
+                </div>
+                <div className='social-media-general'>
+                    <div className='social-media-images'>
+                        <div className='social-media-logo'>
+                            <Link to={'https://web.facebook.com/institutonsfatima'}>
+                                <img className='logo-rede'
+                                    src={Facebook}
+                                    height='40px'
+                                />
+                            </Link>
+                        </div>
+                        <div className='social-media-logo'>
+                            <Link to={'https://www.instagram.com/institutonsfatima'}>
+                                <img className='logo-rede'
+                                    src={Instagram}
+                                    height='40px'
+                                />
+                            </Link>
+                        </div>
+                        <div className='social-media-logo'>
+                            <Link to={'https://www.acaonsfatima.org.br'}>
+                                <img className='logo-rede'
+                                    src={Chrome}
+                                    height='40px'
+                                />
+                            </Link>
+                        </div>
+                        <div className='social-media-logo'>
+                            <Link to={'https://www.linkedin.com/company/institutonsfatima'}>
+                            <img className='logo-rede'
+                                src={LinkedIn}
+                                height='40px'
+                            />
+                            </Link>
+                        </div>
+                    </div>
+                    <div className='social-media-texts'>
+                        <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
+                        <p className='social-media-name'>institutonsfatima</p>
+                        <p className='social-media-name'>https://www.acaonsfatima.org.br</p>
+                        <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
+                    </div>
+                </div>
             </footer>
 
         </div>

@@ -23,7 +23,9 @@ function Login() {
                         </Link>
                     </div>
                     <div className='login-background-logo2'>
-                        <h2 className='login-title'>5° Edição Feira de Profissões Instituto Nossa Senhora de Fátima</h2>
+                        <h2 className='login-title'>5° Edição</h2>
+                        <h2 className='login-title'>Feira de Profissões</h2>
+                        <h2 className='login-title'>Instituto Nossa Senhora de Fátima</h2>
                                     
                         <img className='logo logo--feira'
                             src={feiralogo}

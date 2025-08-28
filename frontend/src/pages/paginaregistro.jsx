@@ -6,9 +6,33 @@ import Facebook from '../assets/facebookLogo.png';
 import Instagram from '../assets/InstagramLogo.png';
 import Chrome from '../assets/ChromeLogo.png';
 import LinkedIn from '../assets/LinkedInLogo.png';
+import { useState } from 'react';
 import AlunoPCInfo from '../assets/AlunoPCInfo.png';
 
 function Registro() {
+    const [formulario, setFormulario] = useState({
+      nome: '',
+      idade: '',
+      cpf: '',
+      telefone: '',
+      email: '',
+      escolariadade: '',
+      cursoInteresse: '',
+      comoSoube: '',
+      previsaoChegada: '',
+      jaFoiAluno: null,
+    })
+
+
+ const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    const novoValor = type === 'radio' ? value : (type === 'checkbox' ? checked : value);
+    setFormulario((prevData) => ({
+      ...prevData,
+      [name]: novoValor,
+    }));
+ };
+
   return (
     <>
         <div className='registry-container'>
@@ -38,24 +62,24 @@ function Registro() {
                 </div>
                 <div className='main-registry-list'>
                     <div className='main-list-input1'>
-                        <input className='list-input1' value={'Nome'} />
-                        <input className='list-input1' value={'Idade'} />
+                        <input className='list-input1' name='nome' placeholder='Nome' />
+                        <input className='list-input1' name='idade' placeholder='Idade' />
                     </div>
                     <br />
                     <div className='main-list-input1'>
-                        <input className='list-input1' value={'CPF'} />
-                        <input className='list-input1' value={'Telefone'} />
+                        <input className='list-input1' name='cpf' placeholder='CPF' />
+                        <input className='list-input1' name='telefone' placeholder='Telefone' />
                     </div>
                     <br />
-                    <input className='list-input2' value={'Email'} />
+                    <input className='list-input2' name='email' placeholder='Email' />
                     <br />
-                    <input className='list-input2' value={'Escolaridade'} />
+                    <input className='list-input2' name='escolaridade' placeholder='Escolaridade' />
                     <br />
-                    <input className='list-input2' value={'Curso de Interesse'} />
+                    <input className='list-input2' name='cursoInteresse' placeholder='Curso de Interesse' />
                     <br />
-                    <input className='list-input2' value={'Como ficou sabendo da Feira'} />
+                    <input className='list-input2' name='comoSoube' placeholder='Como ficou sabendo da Feira' />
                     <br />
-                    <input className='list-input2' value={'Previsão de Chegada'} />
+                    <input className='list-input2' name='previsaoDeChegada' placeholder='Previsão de Chegada' />
                     <br />
 
                     <div className='main-registry-button'>
@@ -64,11 +88,24 @@ function Registro() {
                         </div>
                         <div className='main-buttons'>
                             <div className='main-button-confirm'>
-                                <input type="checkbox" />
+                                <input
+                                    type="radio"
+                                    name="jaFoiAluno"
+                                    value="sim"
+                                    checked={formulario.jaFoiAluno === 'sim'}
+                                    onChange={handleChange}
+                                />
                                 <p>Sim</p>
-                            </div>
-                            <div className='main-button-confirm'>
-                                <input type="checkbox" />
+                                </div>
+                                {/* Botão de rádio para "Não" */}
+                                <div className='main-button-confirm'>
+                                <input
+                                    type="radio"
+                                    name="jaFoiAluno"
+                                    value="nao"
+                                    checked={formulario.jaFoiAluno === 'nao'}
+                                    onChange={handleChange}
+                                />
                                 <p>Não</p>
                             </div>
                         </div>
@@ -128,6 +165,6 @@ function Registro() {
         </div>
     </>
   )
-}
 
+}
 export default Registro;

@@ -1,8 +1,12 @@
 import { adicionarRotas } from './rotas.js';
-
+import cors from 'cors'
 import express from 'express'
-const api = express();
-api.use(express.json()); // permite o uso de BODY
+
+
+    const api = express();
+        api.use(express.json());
+        api.use(cors());
+
 
 adicionarRotas(api);
 

@@ -9,3 +9,5 @@ api.post('/cadastro', async (req, resp) =>{
   let id = await cadastro(novoCadastro);
   resp.send({ novoId: id });
 })
+
+export default api

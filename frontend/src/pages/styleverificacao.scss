@@ -44,3 +44,35 @@ $button-end: #f4b434;
   background-color: #E2F1FA;
   padding: 20px;
 }
+
+.main {
+  
+}
+
+.verification-footer {
+  margin-top: 2%;
+  background-color: #C9BCBC;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .social-media-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .social-media-general {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .social-media-images {
+      //background-color: yellow;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+}

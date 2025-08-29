@@ -30,33 +30,55 @@ function Verificacao() {
                 </div>
             </header>
 
-            <main className='main'>
-                
+            <main className='main-verification'>
+
+                <div className='main-input'>
+                    <input className='input-name' name='Nome' placeholder='Nome' />
+                </div>
+                <button className='verify-button'>Buscar</button>
 
             </main>
 
-            <footer className='footer'>
-                
-                <img className='logo-rede'
-                    src={Facebook}
-                    height='50px'
-                />
-
-                <img className='logo-rede'
-                    src={Instagram}
-                    height='50px'
-                />
-
-                <img className='logo-rede'
-                    src={Chrome}
-                    height='50px'
-                />
-
-                <img className='logo-rede'
-                    src={LinkedIn}
-                    height='50px'
-                />
-
+            <footer className='verification-footer'>
+                <div className='social-media-call'>
+                    <h2>Nos acompanhe em nossas redes sociais!</h2>
+                </div>
+                <div className='social-media-general'>
+                    <div className='social-media-images'>
+                        <div className='social-media-logo'>
+                            <Link to={'https://web.facebook.com/institutonsfatima'}>
+                                <img className='logo-rede'
+                                    src={Facebook}
+                                    height='40px'
+                                />
+                            </Link>
+                        </div>
+                        <div className='social-media-logo'>
+                            <Link to={'https://www.instagram.com/institutonsfatima'}>
+                                <img className='logo-rede'
+                                    src={Instagram}
+                                    height='40px'
+                                />
+                            </Link>
+                        </div>
+                        <div className='social-media-logo'>
+                            <Link to={'https://www.acaonsfatima.org.br'}>
+                                <img className='logo-rede'
+                                    src={Chrome}
+                                    height='40px'
+                                />
+                            </Link>
+                        </div>
+                        <div className='social-media-logo'>
+                            <Link to={'https://www.linkedin.com/company/institutonsfatima'}>
+                            <img className='logo-rede'
+                                src={LinkedIn}
+                                height='40px'
+                            />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
             </footer>
 
         </div>

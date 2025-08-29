@@ -8,6 +8,8 @@ import Chrome from '../assets/ChromeLogo.png';
 import LinkedIn from '../assets/LinkedInLogo.png';
 import { useState } from 'react';
 import AlunoPCInfo from '../assets/AlunoPCInfo.png';
+import Dropdown1 from '../carousel1/dropdown1.jsx';
+import Dropdown2 from '../carousel1/dropdown2.jsx';
 
 function Registro() {
     const [formulario, setFormulario] = useState({
@@ -73,9 +75,11 @@ function Registro() {
                     <br />
                     <input className='list-input2' name='email' placeholder='Email' />
                     <br />
-                    <input className='list-input2' name='escolaridade' placeholder='Escolaridade' />
+                    {/* <input className='list-input2' name='escolaridade' placeholder='Escolaridade' /> */}
+                    <Dropdown1 name='escolaridade'/>    
                     <br />
-                    <input className='list-input2' name='cursoInteresse' placeholder='Curso de Interesse' />
+                    {/* <input className='list-input2' name='cursoInteresse' placeholder='Curso de Interesse' /> */}
+                    <Dropdown2 name='cursoInteresse'/>  
                     <br />
                     <input className='list-input2' name='comoSoube' placeholder='Como ficou sabendo da Feira' />
                     <br />
@@ -153,12 +157,6 @@ function Registro() {
                                 />
                             </Link>
                         </div>
-                    </div>
-                    <div className='social-media-texts'>
-                        <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
-                        <p className='social-media-name'>institutonsfatima</p>
-                        <p className='social-media-name'>https://www.acaonsfatima.org.br</p>
-                        <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
                     </div>
                 </div>
             </footer>

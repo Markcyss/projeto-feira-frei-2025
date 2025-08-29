@@ -9,3 +9,5 @@ frontend:
     npm i sass
     
     npm i react-router
+
+    npm i react-icons

@@ -20,5 +20,26 @@
         "src": "src/assets/FotoFeira1.jpeg",
         "alt": "Imagem 5"
     }
+  ],
+
+  "dropdown1": [
+    {
+        "src": "Ensino Fundamental"
+    },
+    {
+        "src": "Ensino Médio"
+    },
+    {
+        "src": "Ensino Superior"
+    },
+    {
+        "src": "Pós Graduação"
+    },
+    {
+        "src": "Mestrado"
+    },
+    {
+        "src": "Doutorado"
+    }
   ]
 }

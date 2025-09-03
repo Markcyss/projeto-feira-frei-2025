@@ -28,6 +28,7 @@ create table registro(
     id_escolaridade int,
     id_curso int,
     id_divulgacao int,
+    ja_foi_aluno tinyint(1),
     foreign key (id_escolaridade) references escolaridade_table (id_escolaridade),
     foreign key (id_curso) references curso_table (id_curso),
     foreign key (id_divulgacao) references divulgacao_table (id_divulgacao)
@@ -71,3 +72,4 @@ values
 
 
 
+select * from registro

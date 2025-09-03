@@ -1,13 +1,12 @@
-import { cadastro } from '../repository/cadastroRepository.js'
-import { Router } from 'express'
+import { cadastro } from '../repository/cadastroRepository.js';
+import { Router } from 'express';
 
-const api = Router()
+const api = Router();
 
-api.post('/cadastro', async (req, resp) =>{
+api.post('/cadastro', async (req, resp) => {
     let novoCadastro = req.body;
+    let id = await cadastro(novoCadastro);
+    resp.send({ novoId: id });
+});
 
-  let id = await cadastro(novoCadastro);
-  resp.send({ novoId: id });
-})
-
-export default api
+export default api;

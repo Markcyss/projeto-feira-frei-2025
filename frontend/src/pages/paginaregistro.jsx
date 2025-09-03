@@ -22,14 +22,54 @@ function Registro() {
     id_escolaridade: '',
     id_curso: '',
     id_divulgacao: '',
-    previsaoDeChegada: '',
-    jaFoiAluno: null,
+    previsao_chegada: '',
+    ja_foi_aluno: null,
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormulario({ ...formulario, [name]: value });
   };
+
+const handleSubmit = async () => {
+
+  const dadosParaEnviar = {
+    ...formulario,
+    idade: parseInt(formulario.idade),
+    id_escolaridade: parseInt(formulario.id_escolaridade),
+    id_curso: parseInt(formulario.id_curso),
+    id_divulgacao: parseInt(formulario.id_divulgacao),
+
+    ja_foi_aluno: formulario.ja_foi_aluno ? 1 : 0,
+  };
+
+  try {
+    const res = await fetch('http://localhost:5010/cadastro', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dadosParaEnviar),
+    });
+    if (!res.ok) {
+      throw new Error('Erro ao cadastrar');
+    }
+    alert('Cadastro Realizado!');
+    setFormulario({
+      nome: '',
+      idade: '',
+      cpf: '',
+      telefone: '',
+      email: '',
+      id_escolaridade: '',
+      id_curso: '',
+      id_divulgacao: '',
+      previsao_chegada: '',
+      ja_foi_aluno: null,
+    });
+  } catch (err) {
+    console.error(err);
+    alert('Falha ao cadastrar, verifique se as informações estão inseridas corretamente!');
+  }
+}
 
 
   const fetchData = async (url, setter) => {
@@ -167,10 +207,11 @@ function Registro() {
           <br />
 
           <input
+          type="time"
             className='list-input2'
-            name='previsaoDeChegada'
+            name='previsao_chegada'
             placeholder='Previsão de Chegada'
-            value={formulario.previsaoDeChegada}
+            value={formulario.previsao_chegada}
             onChange={handleChange}
           />
 
@@ -185,10 +226,9 @@ function Registro() {
               <div className='main-button-confirm'>
                 <input
                   type='radio'
-                  name='jaFoiAluno'
-                  value='sim'
-                  checked={formulario.jaFoiAluno === 'sim'}
-                  onChange={handleChange}
+                  name='ja_foi_aluno'
+                  checked={formulario.ja_foi_aluno === true}
+                 onChange={(e) =>setFormulario({ ...formulario, ja_foi_aluno: true })}
                 />
                 <p>Sim</p>
               </div>
@@ -196,17 +236,16 @@ function Registro() {
               <div className='main-button-confirm'>
                 <input
                   type='radio'
-                  name='jaFoiAluno'
-                  value='nao'
-                  checked={formulario.jaFoiAluno === 'nao'}
-                  onChange={handleChange}
+                  name='ja_foi_luno'
+                  checked={formulario.ja_foi_aluno === false}
+                  onChange={(e) => setFormulario({ ...formulario, ja_foi_aluno: false })}
                 />
                 <p>Não</p>
               </div>
             </div>
           </div>
 
-          <button className='button-registry'>Cadastrar</button>
+          <button className='button-registry' onClick={handleSubmit}>Cadastrar</button>
         </div>
       </main>
 

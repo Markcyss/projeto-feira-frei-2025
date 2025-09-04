@@ -59,7 +59,6 @@ $button-end: #f4b434;
   }
 
   .main-registry-list {
-    //background-color: blue;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -92,7 +91,6 @@ $button-end: #f4b434;
   }
   
   .main-registry-button {
-    //background-color: red;
     width: 95%;
     display: flex;
     flex-wrap: wrap;
@@ -110,7 +108,6 @@ $button-end: #f4b434;
       font-size: 14px;
     }
     .main-buttons {
-      //background-color: green;
       display: flex;
       justify-content: space-between;
       width: 45%;
@@ -136,7 +133,12 @@ $button-end: #f4b434;
     border-radius: 15px;
     background-color: #597aac;
     font-weight: bold;
+    cursor: pointer;
   }
+}
+
+.main-registro button:hover {
+  filter: brightness(1.2);
 }
 
 .registry-footer {
@@ -157,7 +159,6 @@ $button-end: #f4b434;
     gap: 10px;
 
     .social-media-images {
-      //background-color: yellow;
       display: flex;
       align-items: center;
       flex-direction: column;

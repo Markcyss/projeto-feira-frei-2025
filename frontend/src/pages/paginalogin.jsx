@@ -35,11 +35,19 @@ function Login() {
                 </div>
             </header>
 
-            <main className='main'>
-                <button className='main-login'>Login</button>  
-                <input value={'Email:'} />
-                <input value={'Password:'}/>
-                <button className='main-enter'>Entrar</button>
+            <main className='main-login'>
+                <div className='login-button'>
+                    <button className='main-login-button'>Login</button>    
+                </div>
+                <div className='main-input'>
+                    <input className='input-name' name='Email' placeholder='Email' />
+                </div>
+                <div className='main-input'>
+                    <input className='input-name' name='Senha' placeholder='Senha' />
+                </div>
+                <div className='enter-button'>
+                    <button className='main-enter-button'>Entrar</button>  
+                </div>
 
             </main>
 
@@ -81,12 +89,6 @@ function Login() {
                             />
                             </Link>
                         </div>
-                    </div>
-                    <div className='social-media-texts'>
-                        <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
-                        <p className='social-media-name'>institutonsfatima</p>
-                        <p className='social-media-name'>https://www.acaonsfatima.org.br</p>
-                        <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
                     </div>
                 </div>
             </footer>

@@ -280,13 +280,6 @@ const handleSubmit = async () => {
               </Link>
             </div>
           </div>
-
-          <div className='social-media-texts'>
-            <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
-            <p className='social-media-name'>institutonsfatima</p>
-            <p className='social-media-name'>https://www.acaonsfatima.org.br</p>
-            <p className='social-media-name'>Instituto Social Nossa Senhora de Fátima</p>
-          </div>
         </div>
       </footer>
     </div>

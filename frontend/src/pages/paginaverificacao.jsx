@@ -35,7 +35,9 @@ function Verificacao() {
                 <div className='main-input'>
                     <input className='input-name' name='Nome' placeholder='Nome' />
                 </div>
-                <button className='verify-button'>Buscar</button>
+                <div className='main-button'>
+                    <button className='verify-button'>Buscar</button>   
+                </div>
 
             </main>
 

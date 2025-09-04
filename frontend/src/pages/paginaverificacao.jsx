@@ -6,8 +6,34 @@ import Facebook from '../assets/facebookLogo.png';
 import Instagram from '../assets/InstagramLogo.png';
 import Chrome from '../assets/ChromeLogo.png';
 import LinkedIn from '../assets/LinkedInLogo.png';
+import { useState } from 'react';
 
 function Verificacao() {
+      const [nome, setNome] = useState("")
+      const [lista, setLista] = useState([])
+
+
+       async function listarnomes() {
+        if(!nome){
+            alert("Digite um nome para buscar!")
+            return
+        }
+        if(!/^[A-Za-zÀ-ÿ\s]+$/.test(nome)){
+            alert("Digite um nome sem numeros ou caracteres especiais!")
+            return
+        }
+
+            try {
+                const resp = await fetch(`http://localhost:5010/filtro?nome=${nome}`)
+                const data = await resp.json()
+                setLista(data.registros)
+
+            } catch(err){
+                console.error("erro ao buscar", err);
+            }
+
+       }
+
   return (
     <>
         <div className='verification-container'>
@@ -33,11 +59,29 @@ function Verificacao() {
             <main className='main-verification'>
 
                 <div className='main-input'>
-                    <input className='input-name' name='Nome' placeholder='Nome' />
+                    <input 
+                    className='input-name' 
+                    name='Nome' 
+                    placeholder='Nome' 
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}
+                    />
                 </div>
                 <div className='main-button'>
-                    <button className='verify-button'>Buscar</button>   
+                    <button className='verify-button' onClick={listarnomes}>Buscar</button>   
                 </div>
+                
+        <div className='lista'>
+          {lista.length > 0 ? (
+            <ul>
+              {lista.map((itens, index) => (
+                <li key={index}>{itens.nome}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>Nenhum resultado encontrado</p>
+          )}
+        </div>
 
             </main>
 

@@ -95,12 +95,16 @@ const handleSubmit = async () => {
       <header className='registry-header'>
         <div className='logo-container'>
           <Link to={'..'}>
-            <img className='logo logo--instituto' src={freilogo} height='50px' />
+            <img className='logo logo--instituto' src={freilogo} height='80px' />
           </Link>
-          <h2 className='registry-title'>
-            5° Edição Feira de Profissões Instituto Nossa Senhora de Fátima
-          </h2>
-          <img className='logo logo--feira' src={feiralogo} height='50px' />
+          <div className='login-background-logo2'>
+            <img src={feiralogo} alt="Logo Feira" className="logo-bg" />
+            <div className="login-titles">
+              <span className="login-title escada-1">5ª Edição</span>
+              <span className="login-title escada-2">Feira de Profissões</span>
+              <span className="login-title escada-3">Instituto Nossa Senhora de Fátima</span>
+            </div>
+          </div>
         </div>
       </header>
 

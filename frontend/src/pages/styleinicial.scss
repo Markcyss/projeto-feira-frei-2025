@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
@@ -262,4 +261,43 @@ $button-end: #f4b434;
       gap: 13px;
     }
   }
+}
+
+.inicial-background-logo2 {
+  background-color: #E2F1FA;
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+  min-height: 1px;
+  justify-content: space-between;
+
+  .inicial-logo-bg {
+    height: 60px;
+    margin-left: 15px;
+    align-self: flex-end;
+  }
+
+  .inicial-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .inicial-title {
+    font-size: 16px;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    line-height: 1.3;
+    margin: 0;
+    white-space: pre-line;
+  }
+
+  .escada-1 { margin-left: 0; }
+  .escada-2 { margin-left: 25px; }
+  .escada-3 { margin-left: 50px; }
 }

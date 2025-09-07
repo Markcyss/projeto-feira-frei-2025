@@ -1,4 +1,4 @@
-import { vincularQrcode } from "../repository/vincularRepository";
+import { vincularQrcode } from "../repository/vincularRepository.js";
 import { Router } from "express";
 
 const api = Router()

@@ -7,7 +7,6 @@ import Facebook from '../assets/facebookLogo.png';
 import Instagram from '../assets/InstagramLogo.png';
 import Chrome from '../assets/ChromeLogo.png';
 import LinkedIn from '../assets/LinkedInLogo.png';
-import AlunoPCInfo from '../assets/AlunoPCInfo.png';
 
 function Registro() {
   const [escolaridade, setEscolaridade] = useState([]);

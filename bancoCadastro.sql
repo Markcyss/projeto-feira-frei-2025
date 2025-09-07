@@ -71,5 +71,4 @@ values
 ('Youtube');
 
 
-
-select * from registro
+select * from registro;

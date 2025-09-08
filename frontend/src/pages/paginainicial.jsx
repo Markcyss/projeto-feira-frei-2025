@@ -15,13 +15,18 @@ import Instagram from '../assets/InstagramLogo.png';
 import Chrome from '../assets/ChromeLogo.png';
 import LinkedIn from '../assets/LinkedInLogo.png';
 import mapandares from '../assets/mapandares.png';
+
 import { Carousel } from "../carousel1/carousel.jsx";
 import { lastfair } from "../assets/data/carousel.json";
+
+import { CarouselCursos } from "../carousel2/carousel.jsx";
+import { courses } from "../assets/data/carousel2.json";
 
 function Paginainicial() {
   return (
     <>
       <div className='hero-container'>
+
         <header className='hero-header'>
           <div className='logo-container'>
             <Link to={'..'}>
@@ -42,6 +47,7 @@ function Paginainicial() {
         </header>
 
         <main className='hero-main-content'>
+
           <div className='main-info'>
             <h2>Instituto Nossa Senhora de Fátima Apresenta:</h2>
           </div>
@@ -79,7 +85,7 @@ function Paginainicial() {
                   <span>Faça seu cadastro aqui!</span>
                 </button>
               </Link>
-              <p>Aluno? <Link to={'./login'} className='login-link'>Clique Aqui!</Link></p>
+              <p>Já fez seu cadastro? <Link to={'./login'} className='login-link'>Clique Aqui!</Link></p>
             </div>
           </div>
 
@@ -100,19 +106,23 @@ function Paginainicial() {
             <p>Descubra tudo o que o Instituto Nossa Senhora de Fátima pode oferecer para o seu futuro!</p>
           </div>
 
+          {/* NOVO CARROSSEL DE CURSOS */}
+          <div className='carousel-cursos-wrapper'>
+            <CarouselCursos data={courses} />
+          </div>
+
           <h2>Mapa de Localização</h2>
 
           <img className='mapandares'
             src={mapandares}
           />
 
-
           <div className='mapa-google'>
             <Link to={'https://www.google.com/maps/place/Instituto+Social+Nossa+Senhora+de+Fátima/@-23.6803333,-46.7105112,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce502d2289a843:0x14406b17b30d0174!8m2!3d-23.6803333!4d-46.7079309!16s%2Fg%2F1ptxj22k2?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D'}>
               <img className='mapa-google-img'
                 src={mapaGoogle}
                 height='300px'
-                width= '95%'
+                width='95%'
               />
             </Link>
           </div>

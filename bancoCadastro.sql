@@ -29,6 +29,7 @@ create table registro(
     id_curso int,
     id_divulgacao int,
     ja_foi_aluno tinyint(1),
+    qrcode varchar(255) unique,
     foreign key (id_escolaridade) references escolaridade_table (id_escolaridade),
     foreign key (id_curso) references curso_table (id_curso),
     foreign key (id_divulgacao) references divulgacao_table (id_divulgacao)
@@ -69,6 +70,7 @@ values
 ('Site da instituição'),
 ('TikTok'),
 ('Youtube');
+
 
 
 select * from registro;

@@ -79,6 +79,7 @@ function Paginainicial() {
                   <span>Faça seu cadastro aqui!</span>
                 </button>
               </Link>
+              <p>Aluno? <Link to={'./login'} className='login-link'>Clique Aqui!</Link></p>
             </div>
           </div>
 
@@ -108,9 +109,10 @@ function Paginainicial() {
 
           <div className='mapa-google'>
             <Link to={'https://www.google.com/maps/place/Instituto+Social+Nossa+Senhora+de+Fátima/@-23.6803333,-46.7105112,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce502d2289a843:0x14406b17b30d0174!8m2!3d-23.6803333!4d-46.7079309!16s%2Fg%2F1ptxj22k2?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D'}>
-              <img
+              <img className='mapa-google-img'
                 src={mapaGoogle}
-                height='200px'
+                height='300px'
+                width= '95%'
               />
             </Link>
           </div>

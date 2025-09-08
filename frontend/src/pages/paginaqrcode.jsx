@@ -82,10 +82,10 @@ function QrCode() {
             </select>
           </div>
 
-          <div className='main-input'>
+          <div className='main-input-image'>
             <input 
               type="file" 
-              className='input-name' 
+              className='input-image' 
               accept="image/png" 
               onChange={(e) => setFile(e.target.files[0])} 
             />

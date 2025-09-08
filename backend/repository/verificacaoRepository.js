@@ -1,12 +1,13 @@
 import { conection } from "./conection.js";
 
-export async function vincularQrcode(nome, qrcode) {
-  const comando = `
-    UPDATE registro 
-    SET qrcode = ?
-    WHERE nome = ?
-  `;
 
-  const [resultado] = await conection.query(comando, [qrcode, nome]);
-  return resultado;
+export async function filtrar(nome) {
+  const comando = `
+    SELECT nome 
+    FROM registro
+    where nome like ?
+  `
+
+  const [registros] = await conection.query(comando, ['%' + nome + '%'])
+  return registros;
 }

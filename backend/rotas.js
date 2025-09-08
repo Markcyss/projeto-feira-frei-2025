@@ -5,6 +5,7 @@ import escolaridadeControler from './controller/escolaridadeController.js'
 import verificacaoController from './controller/verificaçãoController.js'
 import vincularController from './controller/vincularController.js'
 import nomeController from './controller/nomeController.js'
+import loginController from './controller/loginController.js'
 
 
 
@@ -15,5 +16,6 @@ export function adicionarRotas(api) {
   api.use(divulgacaoController);
   api.use(escolaridadeControler);
   api.use(verificacaoController);
-  api.use(nomeController)
+  api.use(nomeController);
+  api.use(loginController);
 }

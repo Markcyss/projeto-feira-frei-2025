@@ -6,8 +6,56 @@ import Facebook from '../assets/facebookLogo.png';
 import Instagram from '../assets/InstagramLogo.png';
 import Chrome from '../assets/ChromeLogo.png';
 import LinkedIn from '../assets/LinkedInLogo.png';
+import { useState } from 'react';
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const i = 0;
+  const emailtest = '';
+
+  async function login() {
+    if (!email) {
+      alert("Digite o email para logar.");
+      return;
+    }
+
+    try {
+      emailtest = await fetch(`http://localhost:5010/login/email?email=${email}`);     
+    } catch (err) {
+      console.error("Email não encontrado.", err);
+    }
+
+    if (emailtest != '') {
+        i = 1;
+    }
+
+    if (!senha) {
+      alert("Digite a senha desta conta");
+      return;
+    }
+
+    try {
+      const senhatest = await fetch(`http://localhost:5010/login/senha?senha=${senha}`);
+      if (senhatest && i == 1) {
+        i = 2;
+      }
+
+    } catch (err) {
+      console.error("Senha incorreta.", err);
+    }
+
+    if (i == 0) {
+      alert('Email incorreto');
+    }
+    else if (i == 1) {
+      alert('Senha incorreta');
+    }
+    else {
+      alert('Login feito com sucesso!');
+    }
+  }
+
   return (
     <>
       <div className='login-container'>
@@ -36,13 +84,25 @@ function Login() {
             <button className='main-login-button'>Login</button>
           </div>
           <div className='main-input'>
-            <input className='input-name' name='Email' placeholder='Email' />
+            <input
+              className='input-name'
+              name='Email'
+              placeholder='Email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className='main-input'>
-            <input className='input-name' name='Senha' placeholder='Senha' />
+            <input
+              className='input-name'
+              name='Senha'
+              placeholder='Senha'
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
           </div>
           <div className='enter-button'>
-            <button className='main-enter-button'>Entrar</button>
+            <button className='main-enter-button' onClick={login} value={i == 2}>Entrar</button>
           </div>
         </main>
         <footer className='inicial-footer'>

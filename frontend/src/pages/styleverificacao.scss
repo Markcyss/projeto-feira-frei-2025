@@ -73,7 +73,19 @@ $button-end: #f4b434;
   font-weight: bold;
   background-color: #9b51e0;
   }
+
+  .lista {
+    background-color: yellow;
+    width: 95%;
+    border: 2px solid black;
+    .lista-visitantes {
+      background-color: #959595;
+      border: 2px solid black;
+      
+    }
+  }
 }
+
 
 .main-verification button:hover {
   filter: brightness(1.2);

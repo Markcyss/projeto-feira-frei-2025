@@ -70,7 +70,7 @@ function Verificacao() {
 
           <div className='lista'>
             {lista.length > 0 ? (
-              <ul>
+              <ul className='lista-visitantes'>
                 {lista.map((itens, index) => (
                   <li key={index}>{itens.nome}</li>
                 ))}

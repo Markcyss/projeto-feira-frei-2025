@@ -35,6 +35,12 @@ create table registro(
     foreign key (id_divulgacao) references divulgacao_table (id_divulgacao)
 );
 
+create table login(
+	id_conta int primary key auto_increment,
+    email varchar(50),
+    senha varchar(50)
+);
+
 insert into escolaridade_table (escolaridade)
 values
 ('Ensino Fundamental'),
@@ -71,6 +77,8 @@ values
 ('TikTok'),
 ('Youtube');
 
-
+insert into login(email, senha)
+	values
+    ('teste01@gmail.com', '1234efgh');
 
 select * from registro;

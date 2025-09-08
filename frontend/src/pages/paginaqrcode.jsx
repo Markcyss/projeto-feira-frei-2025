@@ -9,24 +9,39 @@ import Chrome from '../assets/ChromeLogo.png';
 import LinkedIn from '../assets/LinkedInLogo.png';
 
 function QrCode() {
-    const [nome, setNome] = useState([])
-    
-    const fetchData = async (url, setter) => {
-        try {
-            const res = await fetch(url);
-            if (!res.ok) throw new Error(`Erro ao buscar dados de ${url}`);
-            const data = await res.json();
-            setter(data.registros || []); 
-        } catch (err) {
-            console.error(err);
-            setter([]); 
-        }
-    };
+  const [nome, setNome] = useState([]);
+  const [idSelecionado, setIdSelecionado] = useState('');
+  const [file, setFile] = useState(null);
 
-    useEffect(() => {
-        fetchData('http://localhost:5010/nome', setNome);
-    }, []);
+  const fetchData = async (url, setter) => {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`Erro ao buscar dados de ${url}`);
+      const data = await res.json();
+      setter(data.registros || []); 
+    } catch (err) {
+      console.error(err);
+      setter([]); 
+    }
+  };
 
+  useEffect(() => {
+    fetchData('http://localhost:5010/nome', setNome);
+  }, []);
+
+  // Função para enviar o arquivo
+  const handleUpload = async () => {
+    const formData = new FormData();
+    formData.append("qrcode", file);
+
+    const res = await fetch(`http://localhost:5010/vincular/${idSelecionado}`, {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await res.json();
+    alert(data.mensagem);
+  };
 
   return (
     <>
@@ -52,21 +67,34 @@ function QrCode() {
           </div>
         </header>
         <main className='main-code'>
-            <div className='main-input'>
-                <select
-                    className='input-name'
-                    name='nome'
-                > 
-                    <option value=''>Nome</option>
-                        {nome?.map((item) => (
-                        <option key={item.id} value={item.id}>
-                            {item.nome}
-                        </option>
-                        ))}
-                </select>
-            </div>
           <div className='main-input'>
-            <input className='input-name' name='qrcode' placeholder='Qr Code' />
+            <select
+              className='input-name'
+              name='nome'
+              onChange={(e) => setIdSelecionado(e.target.value)}
+            > 
+              <option value=''>Nome</option>
+              {nome?.map((item) => (
+                <option key={item.id_registro} value={item.id_registro}>
+                  {item.nome}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className='main-input'>
+            <input 
+              type="file" 
+              className='input-name' 
+              accept="image/png" 
+              onChange={(e) => setFile(e.target.files[0])} 
+            />
+          </div>
+
+          <div className='main-input'>
+            <button className='btn-upload' onClick={handleUpload}>
+              Vincular QR Code
+            </button>
           </div>
         </main>
         <footer className='inicial-footer'>

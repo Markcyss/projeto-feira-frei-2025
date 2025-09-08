@@ -1,13 +1,20 @@
-import { vincularQrcode } from "../repository/vincularRepository.js";
 import { Router } from "express";
+import multer from "multer";
+import { vincularQrcode } from "../repository/vincularRepository.js";
 
-const api = Router()
+const api = Router();
 
-api.post("/vincular/:nome/:qrcode", async (req,resp) => {
-    let nome = req.params.nome;
-    let qrcode = req.params.qrcode;
-    let registros = await vincularQrcode(nome,qrcode);
-    resp.json({mensagemVin: `O Visitante foi vinculado ao QRcode N°: ${qrcode}`})
-})  
 
-export default api
+const upload = multer({ dest: "public/storage" });
+
+
+api.post("/vincular/:nome", upload.single("qrcode"), async (req, resp) => {
+  const nome = req.params.nome;
+  const qrcode = req.file.filename; 
+
+  await vincularQrcode(nome, qrcode);
+
+  resp.json({ mensagem: `Visitante ${nome} vinculado ao QR Code ${qrcode}` });
+});
+
+export default api;

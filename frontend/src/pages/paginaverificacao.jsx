@@ -12,6 +12,8 @@ function Verificacao() {
   const [nome, setNome] = useState("");
   const [lista, setLista] = useState([]);
 
+  
+
   async function listarnomes() {
     if (!nome) {
       alert("Digite um nome para buscar!");

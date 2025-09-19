@@ -21,7 +21,7 @@ function Login() {
     }
 
     try {
-      emailtest = await fetch(`http://localhost:5010/login/email`);     
+      emailtest = await fetch(`http://localhost:5010/login/email?email=${email}`);     
     } catch (err) {
       console.error("Email não encontrado.", err);
     }

@@ -67,6 +67,9 @@ function QrCode() {
           </div>
         </header>
         <main className='main-code'>
+          <div className='main-code-button'>
+            <Link to={'../verificacao'}> <button className='verif-code-button'>Link de Verificação</button> </Link>
+          </div>
           <div className='main-input'>
             <select
               className='input-name'

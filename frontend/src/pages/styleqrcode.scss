@@ -80,6 +80,16 @@ $button-end: #f4b434;
   gap: 25px;
   border-radius: 10px;
 
+  .verif-code-button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #808080;
+  }
+
   .input-name {
     width: 95%;
     height: 40px;

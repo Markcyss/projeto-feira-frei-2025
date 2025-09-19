@@ -55,6 +55,9 @@ function Verificacao() {
         </header>
 
         <main className='main-verification'>
+          <div className='main-verif-button'>
+            <Link to={'../code'}> <button className='verif-code-button'>Link de QrCode</button> </Link>
+          </div>
           <div className='main-input'>
             <input
               className='input-name'

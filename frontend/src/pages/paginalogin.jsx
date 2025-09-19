@@ -1,5 +1,5 @@
 import './stylelogin.scss';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import freilogo from '../assets/freilogo.webp';
 import feiralogo from '../assets/feiralogo.webp';
 import Facebook from '../assets/facebookLogo.png';
@@ -9,10 +9,13 @@ import LinkedIn from '../assets/LinkedInLogo.png';
 import { useState } from 'react';
 
 function Login() {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   let i = 0;
   let emailtest = '';
+  let senhatest = '';
 
   async function login() {
     if (!email) {
@@ -39,7 +42,7 @@ function Login() {
     }
 
     try {
-      const senhatest = await fetch(`http://localhost:5010/login/senha?senha=${senha}`);
+      senhatest = await fetch(`http://localhost:5010/login/senha?senha=${senha}`);
       if (senhatest && i == 1) {
         i = 2;
       }
@@ -54,7 +57,18 @@ function Login() {
     else if (i == 1) {
       alert('Senha incorreta');
     }
-    else {
+  }
+  
+  const handleClick = () => {
+    try {
+      login();
+    }
+    catch (err) {
+      console.error("Função não funcional", err);
+    }
+
+    if(i == 2) {
+      navigate('../verificacao');
       alert('Login feito com sucesso!');
     }
   }
@@ -84,7 +98,7 @@ function Login() {
         </header>
         <main className='main-login'>
           <div className='login-button'>
-            <Link to={'../verificacao'}> <button className='main-login-button'>Login</button> </Link>
+            <button className='main-login-button'>Login</button>
           </div>
           <div className='main-input'>
             <input
@@ -105,7 +119,7 @@ function Login() {
             />
           </div>
           <div className='enter-button'>
-            <button className='main-enter-button' onClick={login} value={i == 2}>Entrar</button>
+            <button className='main-enter-button' onClick={handleClick}>Entrar</button>
           </div>
         </main>
         <footer className='inicial-footer'>

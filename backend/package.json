@@ -4,7 +4,9 @@
     "express": "^5.1.0",
     "multer": "^2.0.2",
     "mysql2": "^3.14.4",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "react": "^19.1.1",
+    "sass": "^1.92.1"
   },
   "name": "backend",
   "version": "1.0.0",

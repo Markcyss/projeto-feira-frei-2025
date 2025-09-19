@@ -11,8 +11,8 @@ import { useState } from 'react';
 function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const i = 0;
-  const emailtest = '';
+  let i = 0;
+  let emailtest = '';
 
   async function login() {
     if (!email) {
@@ -21,13 +21,16 @@ function Login() {
     }
 
     try {
-      emailtest = await fetch(`http://localhost:5010/login/email?email=${email}`);     
+      emailtest = await fetch(`http://localhost:5010/login/email`);     
     } catch (err) {
       console.error("Email não encontrado.", err);
     }
 
-    if (emailtest != '') {
-        i = 1;
+    if (!emailtest) {
+        i = 0;
+    }
+    else {
+      i = 1;
     }
 
     if (!senha) {
@@ -81,7 +84,7 @@ function Login() {
         </header>
         <main className='main-login'>
           <div className='login-button'>
-            <button className='main-login-button'>Login</button>
+            <Link to={'../verificacao'}> <button className='main-login-button'>Login</button> </Link>
           </div>
           <div className='main-input'>
             <input

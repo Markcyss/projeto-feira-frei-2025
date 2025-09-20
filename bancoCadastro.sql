@@ -77,6 +77,14 @@ values
 ('TikTok'),
 ('Youtube');
 
+insert into registro(nome, idade, cpf, telefone, email, previsao_chegada, id_escolaridade, id_curso, id_divulgacao, ja_foi_aluno)
+	values
+    ('Caio', '23', '100.000.000-00', '11940028923', 'caio@gmail.com', '8:45:00', 3, 3, 4, true),
+    ('João', '18', '200.000.000-00', '11940028924', 'joao@gmail.com', '10:30:00', 3, 3, 3, true),
+    ('Pedro', '17', '300.000.000-00', '11940028925', 'pedro@gmail.com', '12:00:00', 1, 1, 1, false),
+    ('Ana', '20', '400.000.000-00', '11940028926', 'ana@gmail.com', '10:00:00', 2, 2, 5, false),
+    ('Marcos', '23', '000.000.000-00', '11940028922', 'marcos@gmail.com', '8:50:00', 3, 3, 4, true);
+
 insert into login(email, senha)
 	values
     ('teste01@gmail.com', '1234efgh');

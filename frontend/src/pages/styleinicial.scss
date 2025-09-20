@@ -241,15 +241,9 @@ $button-end: #f4b434;
     .social-media-images {
       display: flex;
       align-items: center;
-      flex-direction: column;
+      margin-bottom: 2%;
       justify-content: center;
       gap: 20px;
-    }
-    .social-media-texts {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 13px;
     }
   }
 }

@@ -75,7 +75,7 @@ function Verificacao() {
             {lista.length > 0 ? (
               <ul className='lista-visitantes'>
                 {lista.map((itens, index) => (
-                  <li key={index}>{itens.nome}</li>
+                  <li className='lista-visitantes-item' key={index}>{itens.nome}</li>
                 ))}
               </ul>
             ) : (

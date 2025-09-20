@@ -85,7 +85,7 @@ function Paginainicial() {
                   <span>Faça seu cadastro aqui!</span>
                 </button>
               </Link>
-              <p>Já fez seu cadastro? <Link to={'./login'} className='login-link'>Clique Aqui!</Link></p>
+              <p>Aluno? <Link to={'./login'} className='login-link'>Clique Aqui!</Link></p>
             </div>
           </div>
 

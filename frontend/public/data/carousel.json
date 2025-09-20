@@ -1,23 +1,23 @@
 {
   "lastfair": [
     {
-        "src": "/FotoGrupo.jpeg",
+        "src": "/images/FotoGrupo.jpeg",
         "alt": "Imagem 1"
     },
     {
-        "src": "/AlunoPCInfo.png",
+        "src": "/images/AlunoPCInfo.png",
         "alt": "Imagem 2"
     },
     {
-        "src": "/AlunosEletro.jpeg",
+        "src": "/images/AlunosEletro.jpeg",
         "alt": "Imagem 3"
     },
     {
-        "src": "/FeiraCV.jpg",
+        "src": "/images/FeiraCV.jpg",
         "alt": "Imagem 4"
     },
     {
-        "src": "/FotoFeira1.jpeg",
+        "src": "/images/FotoFeira1.jpeg",
         "alt": "Imagem 5"
     }
   ],

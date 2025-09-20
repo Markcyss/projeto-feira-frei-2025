@@ -1,31 +1,31 @@
 {
   "courses": [
     {
-      "src": "/InfoPCInfo.png",
+      "src": "/images/InfoPCInfo.png",
       "alt": "Informática",
       "title": "Informática",
       "desc": "O curso de Informática capacita alunos em ferramentas digitais, redes, hardware e software, preparando para o mercado de TI. Os estudantes aprendem programação básica, manutenção de computadores e conceitos de segurança digital, garantindo uma formação completa para atuar na área tecnológica."
     },
     {
-      "src": "/Alunosautos.jpeg",
+      "src": "/images/Alunosautos.jpeg",
       "alt": "Eletromecânica de Autos",
       "title": "Eletromecânica de Autos",
       "desc": "Prepara os alunos para a manutenção de sistemas elétricos e mecânicos de veículos automotores. O curso inclui diagnóstico de falhas, reparos práticos e uso de equipamentos modernos, capacitando para atuar em oficinas e concessionárias automotivas."
     },
     {
-      "src": "/CV.jpg",
+      "src": "/images/CV.jpg",
       "alt": "Comunicação Visual",
       "title": "Comunicação Visual",
       "desc": "Desenvolve a criatividade e o domínio de ferramentas gráficas para produção de conteúdo visual. O aluno aprende técnicas de design, produção de material publicitário e identidade visual, além de trabalhar com softwares de edição e criação para diferentes mídias."
     },
     {
-      "src": "/Adm.jpeg",
+      "src": "/images/Adm.jpeg",
       "alt": "Administração",
       "title": "Administração",
       "desc": "Capacita alunos em gestão, finanças, logística e rotinas administrativas, com foco no ambiente corporativo. O curso aborda planejamento estratégico, liderança e gestão de equipes, preparando para funções administrativas em diversos setores."
     },
     {
-      "src": "/Ingles.jpeg",
+      "src": "/images/Ingles.jpeg",
       "alt": "Inglês",
       "title": "Inglês",
       "desc": "Foco na fluência oral e escrita, ampliando as oportunidades acadêmicas e profissionais dos alunos. O curso oferece práticas de conversação, leitura e compreensão auditiva, além de introduzir aspectos culturais para facilitar a comunicação internacional."
